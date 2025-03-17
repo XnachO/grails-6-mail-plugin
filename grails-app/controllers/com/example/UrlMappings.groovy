@@ -2,6 +2,12 @@ package com.example
 
 class UrlMappings {
     static mappings = {
+        post "/email" {
+            controller = "email"
+            action = "index"
+        }
+
+
         delete "/$controller/$id(.$format)?"(action:"delete")
         get "/$controller(.$format)?"(action:"index")
         get "/$controller/$id(.$format)?"(action:"show")

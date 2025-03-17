@@ -21,6 +21,7 @@ plugins {
 
 // Not Published to Gradle Plugin Portal
 apply plugin: "org.grails.grails-web"
+apply plugin: "org.grails.grails-gsp"
 
 group = "com.example"
 
@@ -54,6 +55,10 @@ dependencies {
     implementation "org.springframework.boot:spring-boot-starter-logging"
     implementation "org.springframework.boot:spring-boot-starter-tomcat"
     implementation "org.springframework.boot:spring-boot-starter-validation"
+
+    implementation 'org.grails.plugins:mail:4.0.0'
+    implementation "org.grails.plugins:gsp"
+
     compileOnly "io.micronaut:micronaut-inject-groovy"
     console "org.grails:grails-console"
     runtimeOnly "com.h2database:h2"
