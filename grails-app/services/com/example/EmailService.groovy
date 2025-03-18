@@ -13,6 +13,9 @@ class EmailService implements GrailsConfigurationAware {
     String toAddress, fromAddress
 
     def send() {
+        // Default value
+        String result = "Email sent"
+
         ArrayList<String> toList = [
                 toAddress,
         ]
@@ -29,8 +32,10 @@ class EmailService implements GrailsConfigurationAware {
             }
         } catch (Exception e) {
             log.error e.getMessage().toString()
+            result = e.getMessage().toString()
         }
 
+        return result
     }
 
     @Override

@@ -37,21 +37,12 @@ grails:
     default:
       codec: html
   mail:
-    host: "smtp.gmail.com"
-    port: "465"
-    username: "" # Complete
-    password: "" # Complete
-    props:
-      mail.smtp:
-        auth: "true"
-        socketFactory:
-          port: "465"
-          class: "javax.net.ssl.SSLSocketFactory"
-          fallback: "false"
+    host: 127.0.0.1
+    port: 3025
 
 emailService:
-  toAddress: "your@email.com"
-  fromAddress: "your@email.com"
+  toAddress: abc@123.com
+  fromAddress: 123@abc.com
 
 dataSource:
   driverClassName: org.h2.Driver

@@ -12,6 +12,10 @@
         </encoder>
     </appender>
 
+    <logger name="grails.plugin.greenmail" level="TRACE" additivity="false">
+        <appender-ref ref="STDOUT" />
+    </logger>
+
     <root level="error">
         <appender-ref ref="STDOUT" />
     </root>

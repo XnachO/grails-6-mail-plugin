@@ -6,6 +6,6 @@ class EmailController {
     EmailService emailService
 
     def index() {
-        emailService.send()
+        render emailService.send()
     }
 }
